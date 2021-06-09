@@ -1,0 +1,458 @@
+/* External Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* General */
+:root{
+    --primaryYellow: #FEEF22;
+    --HeadingColour: #062457;
+    --yellowBG: #EBEBEB;
+    --blueSecondary: #5076FF;
+    --bluePrimary: #3379f3;
+    --white: #FFFFFF;
+    --black: #000000;
+    --offwhite: #FFFFFC;
+    --card1-colour: #D0E4C9;
+    --card2-colour: #C6F0E8;
+    --card3-colour: #D2DEF3;
+    --appsection-BG: #f5f4e9;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p{
+    font-size: 14px;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--HeadingColour); 
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+body{
+    height: 100%;
+    position: relative;
+}
+.Wrapper{
+    background-color: var(--yellowBG);  
+    background-image: url(/Images/Vector.png);
+    background-repeat: no-repeat;
+    background-position-y: -0.4%;
+    background-position-x: -40%;
+}
+.hero-section, section{
+    padding: 85px 75px;
+}
+.hero-section, .app-section, .creditcard-section{
+    display: flex;   
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    }
+/*Nav section */
+    nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav-ul, .logo-desktop{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-top: 12px;
+    }
+    .menu, .close{
+        display: none;
+    }
+    .logo-mobile{
+        display: none;
+    }
+    .logo-desktop{
+        margin-left: 60px;
+    }
+    .nav-ul{
+        margin-left: 8%;
+    }
+    .nav-ul li{
+        margin: 0 10px;
+    }
+    .nav-ul li a{
+        color: var(--offwhite);
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    }
+    .btn-ul{
+        display: flex;
+        margin-left: 34%;
+    }
+    .btn-sign, .btn-login, .hero-btn, .app-btn{
+        padding: 10px 25px;
+        border-radius: 8px;
+        border: none;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+    }
+    .btn-login{
+        background: var(--offwhite);
+        color: var(--bluePrimary);
+        margin-right: 20px;
+    }
+    .btn-sign{
+        background-color: var(--primaryYellow);
+       } 
+   .hero-btn, .app-btn{
+        background: var(--primaryYellow);
+        color: var(--black);
+        padding: 7px 16px;
+    }
+    
+    /* Hero Section */
+    .hero-section{
+        gap: 100px;
+    }
+    .hero-text, .hero-img{
+        flex: 1;
+    }
+    .hero-text h1{
+        margin-bottom: 20px;
+    }
+    .all-hands{
+        max-width: 100%;
+    }
+    .hero-btn{
+        margin: 30px 0;
+    }
+    .download-btn{
+        display: flex;
+    }
+    .googleplay, .applestore{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background-color: var(--white);
+        padding: 10px 14px;
+        border-radius: 8px;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+    .download-text{
+        font-size: 16px;
+        color: var(--bluePrimary);
+        font-weight: bold;
+    }
+    .google-text p, .apple-text p{color: var(--bluePrimary);}
+    
+    /* Card section */
+    .card-section{
+        background-color: var(--white);
+        height: 100%;
+    }
+    .card-section h2{
+        text-align: center; 
+        width: 30%;
+        margin: 0 auto;
+    }
+    .card-section p{
+        text-align: center; 
+        width: 60%;
+        margin: 20px auto;
+    }
+    .card-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0;
+    }
+    .card{
+        flex: 1;
+        background: var(--card2-colour);
+        padding: 10px 0;
+        margin: 0 20px;
+        box-shadow:  0 21.8px 33.4px rgba(0, 0, 0, 0.086),
+                     0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+    .card:hover{
+        box-shadow: 0 5px 6px -6px #777;
+    }
+    .card:last-child{
+        background: var(--card3-colour);
+        position: relative;
+        top: 60px;
+    }
+    .card:first-child{
+        background: var(--card1-colour);
+        position: relative;
+        top: 60px;
+    }
+    .card-img{
+        width: 16%;
+        margin: 10px auto;
+    }
+    .card h5{
+        color: var(--bluePrimary);
+        text-align: center;
+    }
+    .card p{width: 85%;}
+
+    /*App section */
+    .app-section{
+        background: var(--appsection-BG);
+        gap: 100px;
+    }
+   .app-img, .app-text{
+        flex: 1;
+    }
+    .app-img{
+        background-image: url(/Images/Box-BG.png);
+        background-position-x: 80px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .app-img > img{max-width: 92%;}
+    .app-text > p{margin: 10px 0;}
+    .app-text > ul{
+        margin-left: 16px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        margin-top: 40px;
+    }
+    .app-text > ul > li{
+        margin: 8px 0;
+    }
+    .app-btn{
+        max-width: 22%;
+        margin: 30px 0;
+        cursor: pointer;
+    }
+  .app-btn a{text-decoration: none;}  
+
+  /*Credit card section */
+  .creditcard-section{
+    padding: 0;
+    margin: 0;
+  }
+  .cc-img, .cc-text{
+      flex: 1;
+      padding: 85px 70px;
+  }
+  .cc-text p{margin: 25px 0;}
+  .cc-img{
+      background-color: var(--appsection-BG);
+      background-image: url(/Images/Line-bg.png);
+      background-position-x: 65%;
+      background-repeat: no-repeat;
+  }
+  .cc-img img{max-width: 100%;}
+  .card2{
+      position: absolute;
+      left: 70%;
+      top: 68.5%;
+  }
+/* download section */
+.download-section{
+    display: flex;
+    align-items: center;
+    background-color: var(--bluePrimary);
+    height: 100%;
+    padding: 0 75px;
+}
+  .download-img img{
+    max-width: 80%;
+    transform: rotate(18deg);
+  }
+  .download-img{
+    flex: 6;
+}
+.download-wrapper{
+    flex: 6;
+}
+  .download-wrapper{
+    font-size: 16px;
+    color: var(--bluePrimary);
+    font-weight: bold;
+}
+.d-text p{
+    font-size: 40px;
+    margin: 20px 0;
+    color: var(--white);
+}
+/*footer section*/
+footer{
+background-color: var(--yellowBG);
+padding: 15px 75px;
+}
+.footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.footer-text{flex: 1;}
+.menu-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 100px;
+    flex: 2;
+}
+.footer-logo, .first-p{margin: 25px 0;}
+.footer-icons{
+    display: flex;
+    margin: 20px 0;
+}
+.twitter img, .linkedin img, .instagram img, .facebook img{
+    margin-right: 10px;
+    width: 60%;
+}
+.footer-menu h4{margin-bottom: 30px;}
+.footer-menu ul{list-style: none;}
+.footer-menu ul li a{
+    text-decoration: none;
+    color: var(--black);
+    line-height: 2;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-menu ul li a:hover{
+    color: var(--bluePrimary);
+}
+
+
+@media screen and (max-width: 800px) { 
+    .Wrapper{
+    background-position-x: 88%;
+    background-position-y: -0.2%;
+    }
+    .hero-section, section{
+        padding: 45px 25px;
+    }
+    /* Nav Bar */
+    nav{
+        padding-top: 25px;
+    }
+    .nav-ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(to bottom, #496ce7,#f1eebb);
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        margin: 0;
+        padding: 50px 0;
+        transform: translate(-50%, -50%);
+    }
+    .btn-sign, .btn-login{
+        margin: 6px auto;
+      }
+    .menu, .close, .logo-mobile{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    .logo-mobile{left: 0; top: 3px;}
+    .nav-ul li{
+        margin: 10px 0;
+    }
+    .btn-ul{
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .logo-desktop{
+    display: none;
+    }  
+    .logo-mobile{
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    } 
+    .hero-text h1{
+    font-size: 24px;
+    }
+    .btn-signup, .hero-btn{
+    max-width: 35%;
+    }
+    .download-text{
+        font-size: 12px;
+    }
+    .apple, .google-play{
+        width: 20px;
+    }
+    .google-text p, .apple-text p{font-size: 8px;}
+/*hero section */
+.hero-section{
+    gap: 0;
+    flex-direction: column;
+}
+/*card section */
+.card-section h2, .card-section p{
+    text-align: left;
+    width: 100%;
+}
+.card-wrapper{
+    flex-direction: column;
+}
+.card p{
+    text-align: center; 
+    width: 90%;
+}
+.card{
+    margin: 20px 0;
+}
+.card:last-child, .card:first-child{
+    top: 0px;
+}
+.card-wrapper{
+    padding: 5px 0;
+}
+/*app section*/
+.app-section{
+    flex-direction: column-reverse;
+    gap: 50px;
+}
+.app-btn{
+    max-width: 33%;
+}
+
+/*credit card section*/
+.creditcard-section{
+  flex-direction: column;
+  }
+  .cc-img, .cc-text{
+      padding: 85px 25px;
+  }
+  .card2{
+    position: absolute;
+    left: 30%;
+    top: 95%;
+}
+/* download section */
+.download-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+.d-text p{
+    font-size: 20px;
+}
+/* Footer */
+footer{
+    padding: 10px 25px;
+}
+.footer-wrapper{
+   flex-direction: column;
+}
+.menu-wrapper{
+    justify-content: flex-start;
+    gap: 65px;
+}
+.footer-menu h4{margin-bottom: 15px;}
+}
+
+
