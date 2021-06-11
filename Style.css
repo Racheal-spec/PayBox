@@ -170,6 +170,7 @@ body{
         background: var(--card2-colour);
         padding: 10px 0;
         margin: 0 20px;
+        transition: all 0.7s ease-in;
         box-shadow:  0 21.8px 33.4px rgba(0, 0, 0, 0.086),
                      0 100px 80px rgba(0, 0, 0, 0.12);
     }
@@ -239,7 +240,7 @@ body{
   }
   .cc-text p{margin: 25px 0;}
   .cc-img{
-      background-color: var(--appsection-BG);
+    background-color: var(--appsection-BG);
       background-image: url(/Images/Line-bg.png);
       background-position-x: 65%;
       background-repeat: no-repeat;
@@ -318,7 +319,18 @@ padding: 15px 75px;
 .footer-menu ul li a:hover{
     color: var(--bluePrimary);
 }
-
+/* Gsap Properties  */
+.hero-scale{
+    transform: scale(1.5);
+}
+.active{
+    background-color: #99beff;
+    transition: all 1s ease-in;
+}
+.cc-active{
+    background-color: var(--yellowBG);
+    transition: all 0.1s ease-in;
+}
 
 @media screen and (max-width: 800px) { 
     .Wrapper{
@@ -330,7 +342,7 @@ padding: 15px 75px;
     }
     /* Nav Bar */
     nav{
-        padding-top: 25px;
+        padding-top: 55px;
     }
     .nav-ul{
         display: flex;
@@ -341,7 +353,7 @@ padding: 15px 75px;
         width: 100%;
         position: fixed;
         top: 50%;
-        left: 50%;
+        right: 50%;
         z-index: 2;
         margin: 0;
         padding: 50px 0;
@@ -349,6 +361,7 @@ padding: 15px 75px;
     }
     .btn-sign, .btn-login{
         margin: 6px auto;
+        padding: 10px 150px;
       }
     .menu, .close, .logo-mobile{
         display: block;
