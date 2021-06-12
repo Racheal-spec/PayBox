@@ -1,6 +1,6 @@
 const Menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.close');
-const Navlist = document.querySelector('.nav-ul li');
+const Navlist = document.querySelectorAll('.nav-ul li');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,11 +34,12 @@ closeMenu.addEventListener("click", ()=> {
     tl.reversed(!tl.reversed());
 })
 
-/*
-Navlist.addEventListener("click", ()=> {
-    tl.reversed(!tl.reversed());
+Navlist.forEach((item) => {
+    item.addEventListener('click', ()=> {
+     tl.reversed(!tl.reversed());
+    })
 })
-*/
+
 
 //Hero-section animtion
 let HeroTl = gsap.timeline();
@@ -73,7 +74,8 @@ HeroTl.fromTo(
         y: 30, 
         rotate: '120deg', 
         opacity: 0, 
-        scale: 0.4
+        scale: 0.5,
+        ease: "back"
     },
  {
      opacity: 1,
@@ -84,6 +86,16 @@ HeroTl.fromTo(
      duration: 1.3,
     }
 ,'-=0.9')
+.to(
+    ['.shape1', '.shape4', '.shape3', '.shape5', '.shape2'], {
+        rotation: '360', 
+        duration: 5, 
+        ease: 'none', 
+        repeat:-1,
+        repeatDelay: 0.5,
+        yoyo: true  
+    }
+)
 
 //Card section 
 
@@ -91,49 +103,91 @@ let cardTl = gsap.timeline();
 
 cardTl.from(
     '.card',{
-        y: 80, 
-        stagger: 0.4,
-        duration: 1,
+     y: 80, 
+     stagger: 0.4,
+     duration: 1,
      ease: Power1.easeOut,
      scrollTrigger: {
         trigger: '.card-section',
          start: 'top 30%',
-        end: 'bottom 70%',
+        end: 'bottom 40%',
         scrub: true,
-        toggleClass: 'active',
-        markers: true,
+        toggleClass: 'active'
     } 
     },'-=0.2'
 )
 
 //App section
+
 let appTl = gsap.timeline();
 appTl.to(".app-img img",{
-    rotate: '360deg',
+    translateX: '2%',
+    duration: 2,
     scrollTrigger: {
-    trigger: ".app-img",
+    trigger: ".app-section",
     start: 'top top',
     end: "bottom bottom",
-    scrub: 4,
-    markers: true,
+    scrub: true,
     pin: true
 }})
+
+.fromTo('.app-text',
+{
+   scale: 0.2,
+   duration: 3
+},
+{
+    scale: 1,
+    opacity: 1,
+    ease: Power1.easeOut,
+    scrollTrigger: {
+        trigger: '.app-section',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        toggleClass: 'cc-active'
+    } 
+    }
+)
+
 
 //Credit Card
 
 let creditTl = gsap.timeline();
 
-creditTl.from('.creditcard-section',
+creditTl.fromTo('.cc-text',
 {
-    duration: 4,
-     ease: Power1.easeOut,
-     scrollTrigger: {
-        trigger: '.cc-img',
-         start: 'top 30%',
+   scale: 0.2,
+   duration: 3
+},
+{
+    scale: 1,
+    duration: 1,
+    ease: Power1.easeOut,
+    scrollTrigger: {
+        trigger: '.creditcard-section',
+        start: 'top top',
         end: 'bottom 70%',
         scrub: true,
-        toggleClass: 'cc-active',
-        markers: true,
+        toggleClass: 'cc-active'
     } 
     },'-=0.2'
 )
+
+//Download section
+
+
+let phoneTl = gsap.timeline();
+
+phoneTl.to('.download-img img',
+{
+    rotationX:"30", 
+    rotationY:"50", 
+    duration: 3, 
+    ease: 'none', 
+    repeat:-1,
+    repeatDelay: 0.5,
+    yoyo: true
+    },'-=0.2'
+)
+

@@ -144,7 +144,25 @@ body{
         font-weight: bold;
     }
     .google-text p, .apple-text p{color: var(--bluePrimary);}
-    
+    .shape1{
+        position: absolute;
+        top: 5%;
+        right: 80px;
+    }
+    .shape2{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+    }
+    .shape3{
+        position: absolute;
+        top: 6%;
+        right: 40%;
+    }
+    .shape5{
+        position: absolute;
+        right: 20%;
+    }
     /* Card section */
     .card-section{
         background-color: var(--white);
@@ -211,7 +229,11 @@ body{
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .app-img > img{max-width: 92%;}
+    .app-img > img{
+        max-width: 92%;
+        transform: translateX(-100%);
+        transition: all 0.4s ease-in;
+    }
     .app-text > p{margin: 10px 0;}
     .app-text > ul{
         margin-left: 16px;
@@ -329,8 +351,8 @@ padding: 15px 75px;
 }
 .cc-active{
     background-color: var(--yellowBG);
-    transition: all 0.1s ease-in;
 }
+
 
 @media screen and (max-width: 800px) { 
     .Wrapper{
@@ -380,6 +402,9 @@ padding: 15px 75px;
     .logo-desktop{
     display: none;
     }  
+    .hide{
+        display: none;
+    }
     .logo-mobile{
     display: block;
     margin-top: 10px;
