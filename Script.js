@@ -6,7 +6,7 @@ function loader () {
     window.addEventListener("DOMContentLoaded", () => {
      // preloader animation
      gsap.timeline().fromTo(
-        "#js-preloader",
+        "#main-preloader",
         {
           autoAlpha: 1
         },
@@ -44,7 +44,7 @@ function Animations() {
      },
      {
          opacity: 0,
-         right: "-50%",
+         right: "-100%",
          stagger: 0.1,
          y: 0,
          duration: 0.6,

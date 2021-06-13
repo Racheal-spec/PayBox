@@ -389,7 +389,7 @@ padding: 15px 75px;
 .preloader-text{
     font-size: 24px;
     top: 48%;
-    right: 36%;
+    right: 31%;
 }
     .Wrapper{
     background-position-x: 88%;
@@ -405,13 +405,14 @@ padding: 15px 75px;
     .nav-ul{
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
-        background: linear-gradient(to bottom, #496ce7,#f1eebb);
-        height: 100vh;
+        background: #5894fd;
+        height: 100%;
         width: 100%;
         position: fixed;
-        top: 50%;
-        right: 50%;
+        top: 49%;
+        right: 100%;
         z-index: 2;
         margin: 0;
         padding: 50px 0;
@@ -419,7 +420,7 @@ padding: 15px 75px;
     }
     .btn-sign, .btn-login{
         margin: 6px auto;
-        padding: 10px 150px;
+        padding: 10px 120px;
       }
     .menu, .close, .logo-mobile{
         display: block;
