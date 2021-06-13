@@ -21,6 +21,37 @@
   margin: 0;
   box-sizing: border-box;
 }
+.preloader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--HeadingColour);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+
+.preloader-box{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #eee562e5;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.preloader-text{
+    position: absolute;
+    color: var(--white);
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 auto;
+    top: 46%;
+    right: 41%;
+}
 p{
     font-size: 14px;
     color: var(--black);
@@ -355,6 +386,11 @@ padding: 15px 75px;
 
 
 @media screen and (max-width: 800px) { 
+.preloader-text{
+    font-size: 24px;
+    top: 48%;
+    right: 36%;
+}
     .Wrapper{
     background-position-x: 88%;
     background-position-y: -0.2%;
