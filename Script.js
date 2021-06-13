@@ -52,8 +52,8 @@ function Animations() {
      })
      
      tl.to(".nav-ul", {
-         right: "-50%"
-     })
+        right: "-50%"
+    })
      tl.staggerFrom(".nav-ul li a", 0.2, {opacity: 1}, 0.1, "-=0.2");
      tl.reverse();
      
@@ -65,11 +65,11 @@ function Animations() {
      })
      
      Navlist.forEach((item) => {
-         item.addEventListener('click', ()=> {
-          tl.reversed(!tl.reversed());
-         })
-     })
-     
+        item.addEventListener('click', ()=> {
+         tl.reversed(!tl.reversed());
+        })
+    })
+    
      
      //Hero-section animtion
      let HeroTl = gsap.timeline();
@@ -157,8 +157,7 @@ function Animations() {
          trigger: ".app-section",
          start: 'top top',
          end: "bottom bottom",
-         scrub: true,
-         pin: true
+         scrub: true
      }})
      
      .fromTo('.app-text',
@@ -182,6 +181,7 @@ function Animations() {
      
      
      //Credit Card
+     
      
      let creditTl = gsap.timeline();
      
