@@ -2,8 +2,11 @@ const Menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.close');
 const Navlist = document.querySelectorAll('.nav-ul li');
 
+
+gsap.registerPlugin(ScrollTrigger);
 function loader () {
     window.addEventListener("DOMContentLoaded", () => {
+       
      // preloader animation
      gsap.timeline().fromTo(
         "#main-preloader",
@@ -32,7 +35,6 @@ function loader () {
      
 
 function Animations() {
-    gsap.registerPlugin(ScrollTrigger);
 
      let tl = gsap.timeline({ paused: true });
      
@@ -69,7 +71,7 @@ function Animations() {
          tl.reversed(!tl.reversed());
         })
     })
-    
+}
      
      //Hero-section animtion
      let HeroTl = gsap.timeline();
@@ -147,11 +149,22 @@ function Animations() {
          },'-=0.2'
      )
      
+     
      //App section
      
      let appTl = gsap.timeline();
-     appTl.to(".app-img img",{
-         translateX: '2%',
+     appTl.fromTo(".app-img img",{
+        x: -100,
+        y: 0,
+        autoAlpha: 0
+     },
+     {
+        x: 0, 
+        y: 0,
+        ease: "expo",
+        autoAlpha: 1,
+        overwrite: "auto",
+         translateX: '0',
          duration: 2,
          scrollTrigger: {
          trigger: ".app-section",
@@ -159,33 +172,26 @@ function Animations() {
          end: "bottom bottom",
          scrub: true
      }})
-     
-     .fromTo('.app-text',
-     {
-        scale: 0.2,
-        duration: 3
-     },
-     {
-         scale: 1,
-         opacity: 1,
+     .from(
+        ['.app-text p', ".app-text ul"],{
+         y: 80, 
+         duration: 1,
          ease: Power1.easeOut,
          scrollTrigger: {
-             trigger: '.app-section',
-             start: 'top top',
-             end: 'bottom bottom',
-             scrub: true,
-             toggleClass: 'cc-active'
-         } 
-         }
-     )
-     
+            trigger: '.app-section',
+             start: 'top 30%',
+            end: 'bottom 40%',
+            scrub: true
+        } 
+        },'-=0.2'
+    )
+   
      
      //Credit Card
      
-     
      let creditTl = gsap.timeline();
      
-     creditTl.fromTo('.cc-text',
+     creditTl.fromTo('.cc-img img',
      {
         scale: 0.2,
         duration: 3
@@ -202,11 +208,11 @@ function Animations() {
              toggleClass: 'cc-active'
          } 
          },'-=0.2'
+         
      )
      
      //Download section
-     
-     
+
      let phoneTl = gsap.timeline();
      
      phoneTl.to('.download-img img',
@@ -221,9 +227,6 @@ function Animations() {
          },'-=0.2'
      )
      
-     
-}
-
 
 
     }//window
