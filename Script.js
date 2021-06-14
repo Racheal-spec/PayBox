@@ -168,24 +168,10 @@ function Animations() {
          duration: 2,
          scrollTrigger: {
          trigger: ".app-section",
-         start: 'top top',
+         start: 'top center',
          end: "bottom bottom",
          scrub: true
      }})
-     .from(
-        ['.app-text p', ".app-text ul"],{
-         y: 80, 
-         duration: 1,
-         ease: Power1.easeOut,
-         scrollTrigger: {
-            trigger: '.app-section',
-             start: 'top 30%',
-            end: 'bottom 40%',
-            scrub: true
-        } 
-        },'-=0.2'
-    )
-   
      
      //Credit Card
      
