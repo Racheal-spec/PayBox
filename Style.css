@@ -528,5 +528,17 @@ footer{
 }
 .footer-menu h4{margin-bottom: 15px;}
 }
-
-
+/*media queries*/
+@media screen and (min-width: 1141px) {
+    .nav-ul{
+        margin-left: 3.5%;
+    }
+    .btn-ul{
+        margin-left: 54%;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1140px) {
+   .nav-ul{
+  
+   }
+}

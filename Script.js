@@ -15,7 +15,7 @@ function loader () {
         },
         {
           autoAlpha: 0,
-          duration: 0.8,
+          duration: 2,
           onComplete: function() {
             Animations();
           }
@@ -49,14 +49,13 @@ function Animations() {
          right: "-100%",
          stagger: 0.1,
          y: 0,
-         duration: 0.6,
          ease: 'power1.out'
      })
      
      tl.to(".nav-ul", {
         right: "-50%"
     })
-     tl.staggerFrom(".nav-ul li a", 0.2, {opacity: 1}, 0.1, "-=0.2");
+     tl.staggerFrom(".nav-ul li a", 0.1, {opacity: 1}, 0.1, "-=0.2");
      tl.reverse();
      
      Menu.addEventListener("click", ()=> {
@@ -175,28 +174,26 @@ function Animations() {
      
      //Credit Card
      
-     let creditTl = gsap.timeline();
+     let creditTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.creditcard-section',
+            start: 'top top',
+            end: 'bottom 70%',
+            scrub: true,
+            toggleClass: 'cc-active'
+            
+        } 
+        },'-=0.2'
+    );
      
-     creditTl.fromTo('.cc-img img',
+     creditTl.from('.cc-img',
      {
-        scale: 0.2,
-        duration: 3
-     },
-     {
-         scale: 1,
-         duration: 1,
-         ease: Power1.easeOut,
-         scrollTrigger: {
-             trigger: '.creditcard-section',
-             start: 'top top',
-             end: 'bottom 70%',
-             scrub: true,
-             toggleClass: 'cc-active'
-         } 
-         },'-=0.2'
-         
+        scale: 0.1,
+        duration: 4,
+        ease: Power1.easeOut,
+     }
      )
-     
+
      //Download section
 
      let phoneTl = gsap.timeline();
